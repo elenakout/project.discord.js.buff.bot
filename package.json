@@ -1,0 +1,19 @@
+{
+  "name": "buff-bot",
+  "version": "1.0.0",
+  "description": "Discord bot from coding train",
+  "main": "bot.js",
+  "scripts": {
+    "lint": "eslint src/",
+    "start": "node src/index.js"
+  },
+  "author": "elenakout",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  }
+}
