@@ -10,6 +10,7 @@
   "author": "elenakout",
   "license": "ISC",
   "dependencies": {
+    "discord-jokes": "^3.0.0",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0"
   },

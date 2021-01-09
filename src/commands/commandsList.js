@@ -1,5 +1,7 @@
 const commands = [
-  '!8ball',
+  '**8 Ball** - Get a prediction for a yes or no question.',
+  'Usage: !8ball [question]',
+  '',
   '!ping',
   '!commands'
 ];
