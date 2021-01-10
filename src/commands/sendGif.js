@@ -1,13 +1,20 @@
 const fetch = require('node-fetch');
 
 async function getGif(keyword) {
-  const url = `https://api.tenor.com/v1/search?q=${keyword}&key=${process.env.TENOR_KEY}`;
+  try {
+    const url = `https://api.tenor.com/v1/search?q=${keyword}&key=${process.env.TENOR_KEY}`;
 
-  const result = await fetch(url);
+    const result = await fetch(url);
 
-  const json = await result.json();
-  const i = Math.floor(Math.random * json.results.length);
-  return json.results[i].url;
+    const json = await result.json();
+    console.log(json);
+    const i = Math.floor(Math.random * json.results.length);
+    return json.results[i].url;
+
+  } catch (error) {
+    console.log(error);
+  }
+
 }
 
 
