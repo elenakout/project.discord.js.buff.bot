@@ -2,6 +2,7 @@ const ping = require('./ping');
 const eightBall = require('./8ball');
 const commandsList = require('./commandsList');
 const lol = require('./lol');
+const sendGif = require('./sendGif');
 
 // const guildID = process.env.GUILD_ID;
 // const channelID = process.env.CHANNEL_ID;
@@ -10,7 +11,8 @@ const commands = {
   ping,
   '8ball': eightBall,
   'commands': commandsList,
-  lol
+  lol,
+  'gif': sendGif
 };
 
 module.exports = async (msg) => {
