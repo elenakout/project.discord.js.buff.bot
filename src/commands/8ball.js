@@ -1,12 +1,22 @@
 const eightBall = [
-  'As I see it, yes.',
-  'Ask again later.',
-  'Better not tell you now.',
-  'Cannot predict now.',
-  'Concentrate and ask again.',
-  'Don\'t count on it.',
-  'It is certain.',
-  'It is decidedly so.'
+  'As If, Ask Me If I Care.',
+  'Dumb Question Ask Another.',
+  'Forget About It, Get A Clue.',
+  'In Your Dreams.',
+  'Not.',
+  'Not A Chance.',
+  'Obviously',
+  'Oh Please.',
+  'Sure.',
+  'That"s Ridiculous',
+  'Well Maybe',
+  'What Do You Think?',
+  'Whatever',
+  'Who Cares?',
+  'Yeah And I"m The Pope',
+  'Yeah Right',
+  'You Wish',
+  'You ve Got To Be Kidding...'
 ];
 
 module.exports = async (msg, args) => {
