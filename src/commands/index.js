@@ -1,4 +1,4 @@
-const ping = require('./ping');
+// const ping = require('./ping');
 const eightBall = require('./8ball');
 const commandsList = require('./commandsList');
 const lol = require('./lol');
@@ -8,7 +8,7 @@ const sendGif = require('./sendGif');
 // const channelID = process.env.CHANNEL_ID;
 
 const commands = {
-  ping,
+  // ping,
   '8ball': eightBall,
   'commands': commandsList,
   lol,
@@ -24,7 +24,6 @@ module.exports = async (msg) => {
   //     commands[command](msg, args);
   //   }
   // }
-
   const args = msg.content.split(' ');
   if (args.length == 0 || args[0].charAt(0) !== '!') return;
   const command = args.shift().substr(1);
