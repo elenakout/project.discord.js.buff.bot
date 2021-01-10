@@ -7,9 +7,11 @@ async function getGif(keyword) {
     const result = await fetch(url);
 
     const json = await result.json();
-    console.log(json);
-    const i = Math.floor(Math.random * json.results.length);
+    const i = Math.floor(Math.random() * json.results.length);
+
+
     return json.results[i].url;
+
 
   } catch (error) {
     console.log(error);
@@ -20,7 +22,9 @@ async function getGif(keyword) {
 
 module.exports = async (msg, args) => {
   let keyword = 'counter strike';
-  if (args.length > 1) keyword = args.slice(1, args.length).join(' ');
+
+  if (args.length >= 1) keyword = args.slice(1, args.length).join(' ');
   const gif = await getGif(keyword);
+
   msg.channel.send(gif);
 };
