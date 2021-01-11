@@ -2,15 +2,15 @@ const fetch = require('node-fetch');
 
 async function getGif(keyword) {
   try {
-    const url = `https://api.tenor.com/v1/search?q=${keyword}&key=${process.env.TENOR_KEY}`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${process.env.GIPHY_KEY}&q=${keyword}&limit=50&offset=0&rating=g&lang=en`;
 
     const result = await fetch(url);
 
     const json = await result.json();
-    const i = Math.floor(Math.random() * json.results.length);
+    const i = Math.floor(Math.random() * json.data.length);
 
-    console.log('tenor keyword: ', keyword);
-    return json.results[i].url;
+    console.log('keyword: ', keyword);
+    return json.data[i].images.original.url;
 
 
   } catch (error) {
@@ -18,7 +18,6 @@ async function getGif(keyword) {
   }
 
 }
-
 
 module.exports = async (msg, args) => {
   let keyword = 'counter strike';
