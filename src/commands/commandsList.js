@@ -10,7 +10,10 @@ const commands = [
   'Usage: !lol',
   '',
   '**Gif** - Get a gif from TENOR',
-  'Usage: !gif [keyword]',
+  'Usage: !gif [keyword] - default: counter strike',
+  '',
+  '**Giphy** - Get a gif from GIPHY',
+  'Usage: !giphy [keyword] - default: counter strike',
   '',
   '**Commands** - Get a list with the bot commants',
   'Usage: !commands'

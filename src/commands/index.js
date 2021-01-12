@@ -1,4 +1,3 @@
-// const ping = require('./ping');
 const eightBall = require('./8ball');
 const commandsList = require('./commandsList');
 const lol = require('./lol');
@@ -9,7 +8,6 @@ const gifGiphy = require('./gifGiphy');
 // const channelID = process.env.CHANNEL_ID;
 
 const commands = {
-  // ping,
   '8ball': eightBall,
   'commands': commandsList,
   lol,
