@@ -4,8 +4,9 @@ const lol = require('./lol');
 const sendGif = require('./sendGif');
 const gifGiphy = require('./gifGiphy');
 
-// const guildID = process.env.GUILD_ID;
-// const channelID = process.env.CHANNEL_ID;
+const guildIDoxi = process.env.GUILD_ID_OXI;
+const channelIDF = process.env.CHANNEL_ID_F;
+const guildIDFR = process.env.GUILD_ID_FR;
 
 const commands = {
   '8ball': eightBall,
@@ -24,11 +25,14 @@ module.exports = async (msg) => {
   //     commands[command](msg, args);
   //   }
   // }
-  const args = msg.content.split(' ');
 
-  if (args.length == 0 || args[0].charAt(0) !== '!') return;
-  const command = args.shift().substr(1);
-  if (Object.keys(commands).includes(command)) {
-    commands[command](msg, args);
+  if (msg.guild.id === guildIDoxi || msg.channel.id === channelIDF || msg.guild.id === guildIDFR) {
+    const args = msg.content.split(' ');
+    if (args.length == 0 || args[0].charAt(0) !== '!') return;
+    const command = args.shift().substr(1);
+    if (Object.keys(commands).includes(command)) {
+      commands[command](msg, args);
+    }
   }
+
 };
