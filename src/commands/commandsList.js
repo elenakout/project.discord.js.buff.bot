@@ -15,7 +15,7 @@ const commands = [
   '**Giphy** - Get a gif from GIPHY',
   'Usage: !giphy [keyword] - default: counter strike',
   '',
-  '**Commands** - Get a list with the bot commants',
+  '**Commands** - Get a list with the bot commands',
   'Usage: !commands'
 ];
 
